@@ -50,4 +50,3 @@ async def update_contact(contact_data: _schemas.CreateContact, contact: _models.
     db.refresh(contact)
 
     return _schemas.Contact.model_validate(contact)
-

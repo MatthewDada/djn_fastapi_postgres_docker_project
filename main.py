@@ -41,4 +41,5 @@ async def update_contact(contact_id: int, contact_data: _schemas.CreateContact, 
     if contact is None:
         raise _fastapi.HTTPException(status_code=404, detail="Contact with id does not exist.")
     
+    
     return await _services.update_contact(contact_data=contact_data, contact=contact, db=db)
